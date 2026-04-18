@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom & Gleam - Women's Accessories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Color Palette: Old Rose & Pastel Pink -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        oldrose: '#B76E79',
+                        pastel: '#F8E2E7',
+                        softpink: '#FAF4F5',
+                        dark: '#4A4A4A',
+                    },
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-style {
+                @apply bg-white rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+            }
+            .btn-primary {
+                @apply bg-oldrose hover:bg-oldrose/90 text-white px-6 py-2 rounded-full font-medium transition-all;
+            }
+        }
+    </style>
+</head>
+<body class="bg-softpink font-poppins text-dark">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white/90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-playfair font-bold text-oldrose">
+                <i class="fa fa-gem mr-2"></i>Bloom & Gleam
+            </div>
+            
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="#" class="hover:text-oldrose transition-colors">Home</a>
+                <a href="#shop" class="hover:text-oldrose transition-colors">Shop</a>
+                <a href="#about" class="hover:text-oldrose transition-colors">About</a>
+                <a href="#contact" class="hover:text-oldrose transition-colors">Contact</a>
+            </div>
+
+            <div class="flex gap-4 text-xl">
+                <a href="#" class="hover:text-oldrose"><i class="fa fa-search"></i></a>
+                <a href="#" class="hover:text-oldrose"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-pastel to-softpink py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-playfair font-bold leading-tight mb-4">
+                    Elevate Your <br> <span class="text-oldrose">Style</span>
+                </h1>
+                <p class="text-lg mb-8 text-gray-600 max-w-lg">Discover our curated collection of elegant jewelry, bags, hair accessories and more — designed just for you.</p>
+                <a href="#shop" class="btn-primary inline-block">
+                    Shop Collection
+                </a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1596783074918-c84cb06531ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Women Accessories" class="rounded-3xl shadow-lg w-full max-w-md mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="shop" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-playfair font-bold mb-2">Our Bestsellers</h2>
+                <p class="text-gray-500">Timeless pieces to complete every look</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Product 1 -->
+                <div class="card-style overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1515562142124-b9c2f062325d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pearl Earrings" class="w-full h-72 object-cover">
+                    <div class="p-6">
+                        <span class="bg-pastel text-oldrose text-sm font-medium px-3 py-1 rounded-full">Jewelry</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">Dainty Pearl Earrings</h3>
+                        <p class="text-gray-500 mb-4">Elegant freshwater pearl earrings perfect for casual and formal wear.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-oldrose">₱299</span>
+                            <button class="btn-primary">
+                                <i class="fa fa-shopping-cart mr-2"></i>Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="card-style overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Hair Clips" class="w-full h-72 object-cover">
+                    <div class="p-6">
+                        <span class="bg-pastel text-oldrose text-sm font-medium px-3 py-1 rounded-full">Hair</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">Vintage Hair Clips Set</h3>
+                        <p class="text-gray-500 mb-4">Set of 6 elegant metal hair clips in pastel and gold designs.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-oldrose">₱199</span>
+                            <button class="btn-primary">
+                                <i class="fa fa-shopping-cart mr-2"></i>Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="card-style overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tote Bag" class="w-full h-72 object-cover">
+                    <div class="p-6">
+                        <span class="bg-pastel text-oldrose text-sm font-medium px-3 py-1 rounded-full">Bags</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">Canvas Tote Bag</h3>
+                        <p class="text-gray-500 mb-4">Spacious and stylish tote bag perfect for school, work or travel.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-oldrose">₱399</span>
+                            <button class="btn-primary">
+                                <i class="fa fa-shopping-cart mr-2"></i>Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="card-style overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784180bc10f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Silk Scarf" class="w-full h-72 object-cover">
+                    <div class="p-6">
+                        <span class="bg-pastel text-oldrose text-sm font-medium px-3 py-1 rounded-full">Apparel</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">Floral Silk Scarf</h3>
+                        <p class="text-gray-500 mb-4">Soft silk scarf perfect for styling your hair, bag or neck.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-oldrose">₱250</span>
+                            <button class="btn-primary">
+                                <i class="fa fa-shopping-cart mr-2"></i>Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="card-style overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1572634800865-55780b072025?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Necklace" class="w-full h-72 object-cover">
+                    <div class="p-6">
+                        <span class="bg-pastel text-oldrose text-sm font-medium px-3 py-1 rounded-full">Jewelry</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">Gold Layered Necklace</h3>
+                        <p class="text-gray-500 mb-4">Dainty layered necklace that goes perfectly with any outfit.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-oldrose">₱350</span>
+                            <button class="btn-primary">
+                                <i class="fa fa-shopping-cart mr-2"></i>Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="card-style overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sunglasses" class="w-full h-72 object-cover">
+                    <div class="p-6">
+                        <span class="bg-pastel text-oldrose text-sm font-medium px-3 py-1 rounded-full">Accessories</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">Vintage Sunglasses</h3>
+                        <p class="text-gray-500 mb-4">Trendy UV-protection sunglasses in pastel frame colors.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-oldrose">₱450</span>
+                            <button class="btn-primary">
+                                <i class="fa fa-shopping-cart mr-2"></i>Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-oldrose/10 py-8 mt-10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-oldrose font-medium">&copy; 2024 Bloom & Gleam. All rights reserved.</p>
+            <p class="text-gray-500 mt-1">Elegant Women's Accessories</p>
+        </div>
+    </footer>
+
+</body>
+</html>
